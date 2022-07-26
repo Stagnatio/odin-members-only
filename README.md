@@ -1,0 +1,1 @@
+Project from The Odin Project for learning authentication and authorization.
