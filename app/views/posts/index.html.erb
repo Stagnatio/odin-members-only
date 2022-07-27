@@ -1,0 +1,9 @@
+<%= current_user.email %>
+
+<% if @posts %>
+    <% @posts.each do |post| %>
+        <%= post.title %>
+    <% end %>
+    <% else %>
+    <p>'There are no posts!'</p>
+<% end %>
