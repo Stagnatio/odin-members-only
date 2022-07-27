@@ -1,3 +1,5 @@
+<%= render 'header' %>
+
 <%= form_with model: Post.new do |form| %>
     <%= label(:title, "Title: ") %>
     <%= form.text_field :title %>
@@ -5,3 +7,6 @@
     <%= form.text_field :body%>
     <%= form.submit %>
 <% end %>
+
+<br>
+<%= link_to "Home", "/posts" %>
