@@ -4,7 +4,9 @@
     <strong><%= post.title %></strong><br>
     <%= post.body %><br>
     <% if user_signed_in? %>
-        <%= post.user.email %><br>
+        <i>Author: <%= post.user.email %></i><br>
+    <% else %>
+        <br>
     <% end %>
     <br>
 <% end %>
