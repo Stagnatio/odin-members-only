@@ -1,3 +1,8 @@
-Currently logged in as: <%= current_user.email %>
-<%= button_to "logout", destroy_user_session_path, method: :delete %>
+<% if user_signed_in? %>
+    Currently logged in as: <%= current_user.email %>
+    <%= button_to "logout", destroy_user_session_path, method: :delete %>
+<% else %>
+    Not signed in. <%= link_to "Click here", "/users/sign_in" %> to sign in or make an account.<br>
+    <br>
+<% end %>
 <br>

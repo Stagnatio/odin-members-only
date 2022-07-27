@@ -3,6 +3,9 @@
 <% @post.each do |post| %>
     <strong><%= post.title %></strong><br>
     <%= post.body %><br>
+    <% if user_signed_in? %>
+        <%= post.user.email %><br>
+    <% end %>
     <br>
 <% end %>
 
